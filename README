@@ -1,0 +1,4 @@
+Array.hpp
+
+This is just a simple header-only implementation of a resizable array, partly compatible with the std::vector class provided with the STL. This is a bit more human readable :)
+
