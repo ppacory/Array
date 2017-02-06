@@ -63,12 +63,13 @@ public:
             int oldLen=len;
             len=newSize;
             checkMax();
-            for(unsigned int i=0; i<oldLen; i++) {
+           /* for(unsigned int i=0; i<oldLen; i++) {
                 temp[i]=array[i];
             }
             for(unsigned int i=oldLen; i<newSize; i++) {
                 temp[i]=content;
-            }
+            }*/
+            std::copy(array, array + index, temp);
         }
         if(newSize<len) { // if newSize is less than len, then just copy the previous array till the length
             for(unsigned int i=0; i<newSize; i++) {
