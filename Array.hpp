@@ -140,12 +140,13 @@ public:
 
     void erase(unsigned int index, unsigned int length=1) {
         T*temp=new T[len-length];
-        for(unsigned int i=0; i<index; i++) {
+    /*    for(unsigned int i=0; i<index; i++) {
             temp[i]=array[i];
         }
         for(unsigned int i=index+length; i<len; i++) {
             temp[i-length]=array[i];
-        }
+        }*/
+      	std::copy(array, array + index, temp);
         delete[] array;
         array=temp;
         len=len-length;
